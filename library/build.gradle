@@ -28,6 +28,7 @@ android {
 dependencies {
   Map<String, String> dependencies = globalConf.dependencies
 
+  compile project(':annotation')
   compile dependencies.conductor
   compile dependencies.daggerAndroid
 }
