@@ -4,10 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ViewGroup;
+
 import com.bluelinelabs.conductor.Conductor;
 import com.bluelinelabs.conductor.Router;
 import com.bluelinelabs.conductor.RouterTransaction;
-import com.christianbahl.conductor.dagger.sample.controller.MainController;
+import com.christianbahl.conductor.dagger.sample.simple.SimpleController;
 
 /**
  * Created by cbahl on 12.03.17.
@@ -29,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     router = Conductor.attachRouter(this, container, savedInstanceState);
     if (!router.hasRootController()) {
-      router.setRoot(RouterTransaction.with(new MainController()));
+      //router.setRoot(RouterTransaction.with(new MainController()));
+      router.setRoot(RouterTransaction.with(new SimpleController()));
     }
   }
 
