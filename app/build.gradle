@@ -27,5 +27,6 @@ dependencies {
 
   compile project(":library")
   compile dependencies.design
+  annotationProcessor project(':processor')
   annotationProcessor dependencies.daggerCompiler
 }

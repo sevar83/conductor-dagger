@@ -3,6 +3,7 @@
 buildscript {
   repositories {
     jcenter()
+    maven { url "https://plugins.gradle.org/m2/" }
   }
   dependencies {
     classpath 'com.android.tools.build:gradle:2.3.3'
@@ -10,6 +11,8 @@ buildscript {
     // Bintray
     classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3"
     classpath "com.github.dcendents:android-maven-gradle-plugin:1.5"
+    // Used by processor
+    classpath 'net.ltgt.gradle:gradle-apt-plugin:0.10'
   }
 }
 
