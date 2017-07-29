@@ -1,4 +1,20 @@
 apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId 'com.github.sevar83.conductor-dagger'
+            artifactId 'annotation'
+            version rootProject.ext.versionName
+
+            from components.java
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])

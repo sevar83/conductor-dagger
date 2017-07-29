@@ -2,8 +2,20 @@ apply plugin: 'java'
 apply plugin: 'net.ltgt.apt'
 apply plugin: 'maven-publish'
 
-group = 'com.christianbahl.conductor'
-version = '1.0'
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId 'com.github.sevar83.conductor-dagger'
+            artifactId 'processor'
+            version rootProject.ext.versionName
+
+            from components.java
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
+}
 
 def globalConf = rootProject.ext
 

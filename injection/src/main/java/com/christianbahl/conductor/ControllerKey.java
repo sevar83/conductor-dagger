@@ -1,9 +1,11 @@
 package com.christianbahl.conductor;
 
 import com.bluelinelabs.conductor.Controller;
-import dagger.MapKey;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;
+
+import dagger.MapKey;
 
 /**
  * Created by cbahl on 12.03.17.

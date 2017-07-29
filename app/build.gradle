@@ -20,12 +20,17 @@ android {
       versionName globalConf.versionName
     }
   }
+
+  lintOptions {
+    abortOnError false
+  }
 }
 
 dependencies {
   Map<String, String> dependencies = globalConf.dependencies
 
-  compile project(":library")
+  compile project(':injection')
+  compile project(':annotation')
   compile dependencies.design
   annotationProcessor project(':processor')
   annotationProcessor dependencies.daggerCompiler
